@@ -922,7 +922,7 @@ func newRunnerPod(template corev1.Pod, runnerSpec v1alpha1.RunnerConfig, default
 	pod := template.DeepCopy()
 
 	if pod.Spec.RestartPolicy == "" {
-		pod.Spec.RestartPolicy = "OnFailure"
+		pod.Spec.RestartPolicy = "Always"
 	}
 
 	if mtu := runnerSpec.DockerMTU; mtu != nil && dockerdInRunner {

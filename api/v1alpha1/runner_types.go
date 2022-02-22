@@ -115,6 +115,9 @@ type RunnerPodSpec struct {
 	NodeSelector map[string]string `json:"nodeSelector,omitempty"`
 
 	// +optional
+	RestartPolicy string `json:"restartPolicy,omitempty"`
+
+	// +optional
 	ServiceAccountName string `json:"serviceAccountName,omitempty"`
 
 	// +optional
